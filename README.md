@@ -35,6 +35,8 @@ In the Toolchain field, select your newly created Docker profile.
 
 Click OK. CLion will now reload the project. You can now build or debug by clicking the Build (Hammer) or Debug (Bug) icons.
 
+## Start DB
 
+`docker-compose up -d`
 
 ## Contributing

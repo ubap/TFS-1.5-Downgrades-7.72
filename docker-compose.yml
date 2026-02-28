@@ -1,0 +1,16 @@
+services:
+  db:
+    image: mariadb:10.6
+    container_name: tfs-mariadb
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: tfs
+      MYSQL_USER: tfs
+      MYSQL_PASSWORD: tfs
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql_data:/var/lib/mysql
+      # Automatyczny import bazy, jeśli masz plik schema.sql:
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
