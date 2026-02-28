@@ -1,0 +1,20 @@
+FROM alpine:3.18
+
+RUN apk add --no-cache \
+  binutils \
+  boost-dev \
+  build-base \
+  clang \
+  cmake \
+  crypto++-dev \
+  fmt-dev \
+  gcc \
+  gmp-dev \
+  luajit-dev \
+  make \
+  mariadb-connector-c-dev \
+  pugixml-dev \
+  gdb \
+  rsync
+
+WORKDIR /src

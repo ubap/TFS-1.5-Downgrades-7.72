@@ -10,10 +10,31 @@ This downgrade is up to Dec 21, 2021, commit: https://github.com/otland/forgotte
 
 `docker build -t tfs-builder .`
 
+# How to debug in Clion
+
+`docker build -t tfs-dev -f Dockerfile.dev .`
+
+Step 2: Configure Toolchain in CLion
+Now, we will configure CLion to use the Docker container as the development environment instead of your local system.
+
+Open Settings (Cmd + ,) -> Build, Execution, Deployment -> Toolchains.
+
+Click the + icon and select Docker.
+
+In the Server field, ensure Docker is selected. For the Image, choose tfs-dev:latest.
+
+Wait a moment for CLion to detect the tools (C++ compiler, CMake, and GDB). Success indicators should appear next to each item once detected.
+
+Step 3: CMake Settings
+Finally, assign the Docker Toolchain to your project to enable building and debugging:
+
+Go to Settings -> Build, Execution, Deployment -> CMake.
+
+In the Toolchain field, select your newly created Docker profile.
+
+
+Click OK. CLion will now reload the project. You can now build or debug by clicking the Build (Hammer) or Debug (Bug) icons.
+
+
+
 ## Contributing
-
-
-
-## Bugs
-
-If you cant compile it submit a request and i will spend either 10+ seconds or 10+ hours to find what works
