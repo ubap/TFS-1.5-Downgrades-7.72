@@ -8,11 +8,11 @@ This downgrade is up to Dec 21, 2021, commit: https://github.com/otland/forgotte
 ## Other distributions:
 ## How to compile
 
-[Wiki](https://github.com/otland/forgottenserver/wiki/Compiling)
-^use vcpkg and just run like in tutorial and will be gucci
+`docker build -t tfs-builder .`
+
 ## Contributing
 
-not allowed f* off
+
 
 ## Bugs
 
