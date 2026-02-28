@@ -39,4 +39,8 @@ Click OK. CLion will now reload the project. You can now build or debug by click
 
 `docker-compose up -d`
 
+## expose port from toolchain to host:
+
+`--entrypoint= -p 7171:7171 -p 7172:7172 --rm` - configure this in toolchain docker settings
+
 ## Contributing
